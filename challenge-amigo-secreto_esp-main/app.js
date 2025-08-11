@@ -22,3 +22,19 @@ function actualizarLista() {
         lista.appendChild(li);
     });
 }
+
+
+function sortearAmigo() {
+    if (amigos.length < 2) {
+        alert("Por favor, añade al menos dos amigos para realizar el sorteo.");
+        return;
+    }
+
+      let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+  let resultado = amigos[indiceAleatorio];
+
+  document.getElementById("resultado").innerHTML =
+    `<li>Tu amigo secreto es: ${resultado}</li>`;
+    
+  }
+
